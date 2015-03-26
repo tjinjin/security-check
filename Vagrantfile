@@ -6,6 +6,7 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure(2) do |config|
+  config.ssh.insert_key = false
   config.vm.define 'centos57' do |a|
     a.vm.box = "chef/centos-5.11"
     a.vm.network "private_network", ip: "192.168.50.10"
